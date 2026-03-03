@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://chat.whatsapp.com/CzYarXXdvxH7SvaIfN0mTV">
-    <title>Redirecionando...</title>
-  </head>
-  <body>
-    Redirecionando...
-  </body>
+<html>
+<head>
+  <title>Redirecionando...</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3PDZC29M6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3PDZC29M6');
+  </script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Você está sendo redirecionado em <span id="contador">3</span> segundos...</h2>
+
+<script>
+let tempo = 3;
+let destino = "https://chat.whatsapp.com/CzYarXXdvxH7SvaIfN0mTV";
+
+let contador = document.getElementById("contador");
+
+let intervalo = setInterval(function() {
+  tempo--;
+  contador.innerHTML = tempo;
+
+  if (tempo <= 0) {
+    clearInterval(intervalo);
+    window.location.href = destino;
+  }
+}, 1000);
+</script>
+
+</body>
 </html>
