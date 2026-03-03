@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3PDZC29M6"></script>
@@ -12,54 +12,34 @@
     gtag('config', 'G-J3PDZC29M6');
   </script>
 
-  <title>Redirecionando...</title>
-
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       text-align: center;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    #contador {
-      font-size: 60px;
-      font-weight: bold;
+      margin-top: 100px;
     }
   </style>
 </head>
-
 <body>
-  <div>
-    <h1>Você será redirecionado em:</h1>
-    <div id="contador">3</div>
-  </div>
 
-  <script>
-    var tempo = 3;
-    var destino = "https://pay.kiwify.com.br/XUkxZ3o"; // TROQUE AQUI
+<h2>Você está sendo redirecionado em <span id="contador">3</span> segundos...</h2>
 
-    var contador = document.getElementById("contador");
+<script>
+let tempo = 3;
+let destino = "https://pay.kiwify.com.br/XUkxZ3o";
 
-    var intervalo = setInterval(function() {
-      tempo--;
-      contador.innerHTML = tempo;
+let contador = document.getElementById("contador");
 
-      if (tempo <= 0) {
-        clearInterval(intervalo);
-        window.location.href = destino;
-      }
-    }, 1000);
-  </script>
+let intervalo = setInterval(function() {
+  tempo--;
+  contador.innerHTML = tempo;
+
+  if (tempo <= 0) {
+    clearInterval(intervalo);
+    window.location.href = destino;
+  }
+}, 1000);
+</script>
 
 </body>
 </html>
